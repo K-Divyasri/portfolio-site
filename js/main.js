@@ -157,6 +157,7 @@
       <p>${p.desc}</p>
       <div class="featured-tags">${p.tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
       ${p.metric ? `<div class="featured-metric">${p.metric}</div>` : ""}
+      ${p.repo ? `<a class="featured-repo-link" href="${p.repo}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Code &#8599;</a>` : ""}
     </article>`
     )
     .join("");
@@ -237,6 +238,7 @@
         <p>${p.desc}</p>
         <div class="archive-tags">${p.tags.map((t) => `<span class="tag">${t}</span>`).join("")}</div>
         ${p.metric ? `<div class="archive-metric">${p.metric}</div>` : ""}
+        ${p.repo ? `<a class="archive-repo-link" href="${p.repo}" target="_blank" rel="noopener" onclick="event.stopPropagation()">Code &#8599;</a>` : ""}
       </article>`
           )
           .join("")
